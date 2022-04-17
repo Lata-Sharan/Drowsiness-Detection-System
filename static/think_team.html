@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="icon" href="assets/logoDDS.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <style type="text/css">
+        .card-about {
+            text-align: justify;
+        }
+        
+        .card-text {
+            font-family: Helvetica;
+            font-stretch: extra-expanded;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-head">
+        <h1>Think Team</h1>
+
+        <div class="row mt-5">
+            <div class="col-sm-6">
+                <div class="card card-style" style="background-color: rgba(21, 65, 131, 0.3)">
+                    <div class="card-body">
+                        <img src="assets/me.JPG">
+                        <p class="card-text">Lata Sharan</p>
+                        <p style="text-align: justify;">An Under Graduate with major in Computer Science from Aligarh Muslim University, Uttar Pradesh, India. </p>
+                        <div class="template-demo"> <button type="button" class="btn btn-social-icon btn-outline-linkedin" onclick="location.href='https://www.linkedin.com/in/lata-sharan-6b283b207/'"><i class="fa fa-linkedin linkedin-bg"></i></button> <button type="button" class="btn btn-social-icon btn-outline-github"
+                                onclick="location.href='https://github.com/Lata-Sharan'"><i class="fa fa-github github-bg"></i></button></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card card-style" style="background-color: rgba(21, 65, 131, 0.3)">
+                    <div class="card-body">
+                        <img src="assets\sir.jpg">
+                        <p class="card-text">Dr. Faisal Anwer</p>
+                        <p style="text-align: justify;"> An Associate Professor at Department of Computer Science, Aligarh Muslim University.</p>
+                        <div class="template-demo"> <button type="button" class="btn btn-social-icon btn-outline-google" onclick="sendEmail2();"><i class="fa fa-google"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Startbtn"><span><a href="dds_start.html" class="btn btn-outline-dark btn-lg" style="text-decoration: none;">Let's Start</a></span>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function sendEmail2() {
+        window.location = "mailto:faisalanwer.cs@amu.ac.in";
+    }
+</script>
