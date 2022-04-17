@@ -16,9 +16,9 @@ def home():
     print(request.method)
     if request.method == 'POST':
         if request.form.get('Continue') == 'Continue':
-           return render_template("static\dds_start.html")
+           return render_template("dds_start.html")
     else:
-        return render_template("static\index.html")
+        return render_template("index.html")
 
 @app.route("/start", methods=['GET', 'POST'])
 def index():
@@ -26,15 +26,15 @@ def index():
     if request.method == 'POST':
         if request.form.get('Start') == 'Start':
             d_dtcn()
-            return render_template("static\index.html")
+            return render_template("index.html")
     else:
-        return render_template("static\index.html")
+        return render_template("index.html")
 
-@app.route('/contact', methods=['GET', 'POST'])
+@app.route('/contact', methods=['GET'])
 def cool_form():
-    if request.method == 'POST':
-        return redirect(url_for('index'))
-    return render_template("static\think_team.html")
+    # if request.method == 'GET':
+    #     return redirect(url_for('index'))
+    return render_template("think_team.html")
 
 if __name__ == "__main__":
     app.run()

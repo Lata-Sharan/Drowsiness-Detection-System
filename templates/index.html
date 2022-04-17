@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="icon" href="../static/assets/logoDDS.png" type="image/x-icon">
+    <link rel="icon" href="assets/logoDDS.jpeg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -551,10 +551,14 @@
             </li>
 
             <div style="padding: 20px;">
-                <a href="{{ url_for('static', filename='dds_start.html') }}">
+                <!-- <a href="dds_start.html">
                     <span>Let's Start</span>
                     <div class="liquid"></div>
-                </a>
+                </a> -->
+                <form method="post" action="/">
+                    <input type="submit" class="btn btn-liquid" value="Continue" name="Continue" />
+                </form>
+
             </div>
         </ul>
 
