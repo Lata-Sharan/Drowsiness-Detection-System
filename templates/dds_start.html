@@ -10,7 +10,12 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <style type="text/css">
         body {
-            background-image: url("assets/DDS_BG.png");
+            background-image: {
+                {
+                    url_for('static', filename="assets/DDS_BG.png"
+                }
+            }
+            ;
             background-repeat: no-repeat;
             background-size: 100% 180%;
         }
@@ -19,8 +24,9 @@
 
 <body>
     <div class="position-center mx-auto d-flex justify-content-center">
-        <form method="post" action="/start">
-            <input type="submit" class="btn btn-outline-danger btn-lg" value="Start Detection" name="Start" />
+        <form method="post" action="/live_feed">
+            <input type="hidden" value="Start" name="Start" />
+            <input type="submit" class="btn btn-outline-danger btn-lg" value="Start Detection" />
         </form>
         <!-- <form method="post" action="/stop">
             <input type="submit" class="btn btn-outline-danger btn-lg" value="Stop Detection" name="Stop" />
@@ -30,7 +36,6 @@
         <span><a href="/contact" class="btn btn-outline-warning btn-lg" style = "text-decoration: line line-through;">Meet the Creators</a></span>
 
     </div>
-
 </body>
 
 </html>

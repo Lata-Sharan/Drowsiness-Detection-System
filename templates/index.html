@@ -137,7 +137,7 @@
             z-index: 1;
         }
         
-        a .liquid {
+        button.liquid {
             position: absolute;
             top: -80px;
             left: 0;
@@ -148,8 +148,8 @@
             transition: .5s;
         }
         
-        a .liquid::after,
-        a .liquid::before {
+        button.liquid::after,
+        button.liquid::before {
             content: '';
             width: 200%;
             height: 200%;
@@ -160,19 +160,19 @@
             background: #000;
         }
         
-        a .liquid::before {
+        button.liquid::before {
             border-radius: 45%;
             background: rgba(31, 44, 84, 1);
             animation: animate 5s linear infinite;
         }
         
-        a .liquid::after {
+        button.liquid::after {
             border-radius: 40%;
             background: rgba(31, 44, 84, .5);
             animation: animate 10s linear infinite;
         }
         
-        a:hover .liquid {
+        button :hover .liquid {
             top: -120px;
         }
         
@@ -434,7 +434,7 @@
             }
         }
         
-        @media screen and (min-width: 400px ?? max-width: 660px) {
+        @media screen and (min-width: 400px) and (max-width: 660px) {
             .direction-l .desc,
             .direction-r .desc {
                 margin: 1em 4em 0 4em;
@@ -451,40 +451,36 @@
         .neon {
             position: relative;
             text-shadow: 0 0 2rem rgba(red, 0.2);
-            &::before,
+            /* &::before,
             &::after {
-                /*Add two copies of the text on their own layer*/
                 content: attr(data-text);
                 color: red;
-                /*And blur them to create the neon effect with the blend-mode below*/
                 filter: blur(0.01em);
                 position: absolute;
                 top: 0;
                 left: 0;
                 pointer-events: none;
-            }
+            } */
             /* Set the top copy to difference. This creates the knock-out effect with a bit of glow*/
-            &::after {
+            /* &::after {
                 mix-blend-mode: difference;
-            }
+            } */
         }
-        /*=== Pen styling, ignore*/
         
         .text-effect {
             flex: 0 1 0;
             text-align: center;
         }
-        /* Style text*/
         
-        .neon {
+        Style text .neon {
             display: inline-block;
             font: 300 50px/1 serif;
             text-transform: uppercase;
             margin: 0;
-            &:focus {
+            /* &:focus {
                 outline: none;
                 border: 1px dotted white;
-            }
+            } */
         }
         
         .text-style {
@@ -551,23 +547,22 @@
             </li>
 
             <div style="padding: 20px;">
+
                 <!-- <a href="dds_start.html">
                     <span>Let's Start</span>
                     <div class="liquid"></div>
                 </a> -->
                 <form method="post" action="/">
-                    <input type="submit" class="btn btn-liquid" value="Continue" name="Continue" />
+                    <input type="hidden" value="Continue" name="Continue" />
+                    <input type="submit" class="button.liquid" value="Let's Start" />
+
                 </form>
 
             </div>
         </ul>
 
-
-
     </section>
-
     </div>
-
 </body>
 
 </html>
